@@ -43,8 +43,8 @@ planner_configs:
     range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()
     goal_bias: 0.05  # When close to goal select goal, with this probability? default: 0.05
     delay_collision_checking: 1  # Stop collision checking as soon as C-free parent found. default 1
-  RTRRTstar:
-    type: geometric::RTRRTstar
+  PRTRRTstar:
+    type: geometric::PRTRRTstar
     range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()
     goal_bias: 0.05  # When close to goal select goal, with this probability? default: 0.05
     delay_collision_checking: 1  # Stop collision checking as soon as C-free parent found. default 1
@@ -144,7 +144,7 @@ panda_arm:
     - RRT
     - RRTConnect
     - RRTstar
-    - RTRRTstar
+    - PRTRRTstar
     - TRRT
     - PRM
     - PRMstar
@@ -173,7 +173,7 @@ hand:
     - RRT
     - RRTConnect
     - RRTstar
-    - RTRRTstar
+    - PRTRRTstar
     - TRRT
     - PRM
     - PRMstar
@@ -200,7 +200,7 @@ panda_arm_hand:
     - RRT
     - RRTConnect
     - RRTstar
-    - RTRRTstar
+    - PRTRRTstar
     - TRRT
     - PRM
     - PRMstar
